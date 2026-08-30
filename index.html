@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern ACM Cladding</title>
+
+<title>SID BUILD | ACM & Exterior Cladding</title>
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -23,528 +26,1085 @@ body{
   overflow-x:hidden;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 header{
   position:fixed;
   top:0;
   left:0;
   width:100%;
   z-index:1000;
-  background:rgba(0,0,0,.82);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(255,255,255,.12);
+
+  background:rgba(8,8,8,0.92);
+
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(255,255,255,0.12);
 }
 
 nav{
+  width:100%;
   max-width:1200px;
+
+  height:78px;
+
   margin:auto;
-  padding:18px 22px;
+  padding:0 24px;
+
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
 }
 
-.logo{
-  font-size:22px;
-  font-weight:800;
-  letter-spacing:3px;
+
+/* LOGO */
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  color:#fff;
+  text-decoration:none;
 }
 
-.logo span{
-  color:#999;
+.brand-mark{
+  width:46px;
+  height:46px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:2px solid #fff;
+
+  font-size:18px;
+  font-weight:900;
 }
+
+.brand-name{
+  display:flex;
+  flex-direction:column;
+
+  line-height:1;
+}
+
+.brand-name strong{
+  font-size:21px;
+  font-weight:900;
+
+  letter-spacing:4px;
+}
+
+.brand-name span{
+  margin-top:5px;
+
+  font-size:10px;
+
+  color:#aaa;
+
+  letter-spacing:5px;
+}
+
+
+/* MENU */
 
 .menu{
   display:flex;
-  gap:25px;
+  align-items:center;
+
+  gap:30px;
 }
 
 .menu a{
-  color:#fff;
-  text-decoration:none;
-  font-size:14px;
-}
-
-.hero{
-  min-height:100svh;
-  display:flex;
-  align-items:flex-end;
   position:relative;
 
+  color:#ddd;
+
+  text-decoration:none;
+
+  font-size:13px;
+  font-weight:600;
+
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.menu a:hover{
+  color:white;
+}
+
+.menu a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-8px;
+
+  width:0;
+  height:2px;
+
+  background:white;
+
+  transition:0.25s;
+}
+
+.menu a:hover::after{
+  width:100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+  min-height:100svh;
+
+  display:flex;
+  align-items:flex-end;
+
   background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.15) 0%,
-      rgba(0,0,0,.25) 40%,
-      rgba(0,0,0,.92) 100%
-    ),
-    url("acm1.jpg");
+
+  linear-gradient(
+    180deg,
+    rgba(0,0,0,.10),
+    rgba(0,0,0,.20),
+    rgba(0,0,0,.92)
+  ),
+
+  url("acm1.jpg");
 
   background-size:cover;
   background-position:center;
+
 }
 
 .hero-content{
+
   width:100%;
   max-width:1200px;
+
   margin:auto;
+
   padding:140px 24px 70px;
+
 }
 
 .kicker{
+
   color:#c7c7c7;
-  font-size:14px;
+
+  font-size:13px;
+
   letter-spacing:4px;
+
   text-transform:uppercase;
-  margin-bottom:15px;
+
+  margin-bottom:16px;
+
 }
 
 .hero h1{
-  font-size:clamp(46px,8vw,84px);
+
+  max-width:800px;
+
+  font-size:clamp(48px,8vw,88px);
+
   line-height:.95;
-  max-width:780px;
+
   text-transform:uppercase;
+
   letter-spacing:-2px;
+
 }
 
 .hero p{
+
   max-width:620px;
+
   margin-top:22px;
+
   color:#ddd;
+
   font-size:18px;
+
   line-height:1.6;
+
 }
 
 .btn{
+
   display:inline-block;
+
   margin-top:28px;
+
   padding:15px 26px;
+
   background:#fff;
+
   color:#111;
+
   text-decoration:none;
+
   font-weight:800;
+
 }
 
+
+/* =========================
+   GENERAL
+========================= */
+
 section{
-  padding:85px 24px;
+  padding:90px 24px;
 }
 
 .container{
+
   max-width:1200px;
+
   margin:auto;
+
 }
 
 .small{
+
   color:#999;
+
   font-size:13px;
-  text-transform:uppercase;
+
   letter-spacing:3px;
+
+  text-transform:uppercase;
+
 }
 
 h2{
+
   font-size:clamp(36px,5vw,58px);
+
   margin-top:10px;
+
 }
 
 .intro{
+
   max-width:700px;
-  color:#aaa;
+
   margin-top:18px;
+
+  color:#aaa;
+
   font-size:17px;
+
   line-height:1.7;
+
 }
 
+
+/* =========================
+   SERVICES
+========================= */
+
 .services{
+
   background:#151515;
+
 }
 
 .service-grid{
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:18px;
+
   margin-top:40px;
+
 }
 
 .service{
+
   background:#202020;
+
   border:1px solid #303030;
+
   padding:30px;
+
 }
 
 .service h3{
+
   font-size:22px;
+
   margin-bottom:12px;
+
 }
 
 .service p{
+
   color:#aaa;
+
   line-height:1.7;
+
 }
 
+
+/* =========================
+   PROJECTS
+========================= */
+
 .projects-grid{
+
   display:grid;
+
   grid-template-columns:repeat(2,1fr);
+
   gap:15px;
+
   margin-top:40px;
+
 }
 
 .project{
-  height:380px;
+
+  height:390px;
+
   position:relative;
+
   overflow:hidden;
+
+  background:#222;
+
 }
 
 .project img{
+
   width:100%;
   height:100%;
+
   object-fit:cover;
+
+  transition:transform .4s ease;
+
+}
+
+.project:hover img{
+
+  transform:scale(1.04);
+
 }
 
 .project-title{
+
   position:absolute;
+
   left:0;
   bottom:0;
+
   width:100%;
-  padding:55px 20px 20px;
-  background:linear-gradient(transparent,rgba(0,0,0,.92));
-  font-weight:700;
+
+  padding:60px 22px 22px;
+
+  background:
+
+  linear-gradient(
+    transparent,
+    rgba(0,0,0,.92)
+  );
+
   font-size:20px;
+
+  font-weight:700;
+
 }
 
+
+/* =========================
+   CUSTOM
+========================= */
+
 .custom{
-  background:#eee;
+
+  background:#ededed;
+
   color:#111;
+
 }
 
 .custom-wrap{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
-  gap:40px;
+
+  gap:45px;
+
   align-items:center;
+
 }
 
 .custom img{
+
   width:100%;
-  height:500px;
+
+  height:520px;
+
   object-fit:cover;
+
 }
 
 .custom p{
-  color:#555;
+
   margin-top:18px;
+
+  color:#555;
+
   font-size:17px;
+
   line-height:1.7;
+
 }
 
+
+/* =========================
+   CONTACT
+========================= */
+
 .contact{
+
   text-align:center;
+
+  background:#0b0b0b;
+
 }
 
 .contact .intro{
+
   margin-left:auto;
+
   margin-right:auto;
+
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
-  text-align:center;
-  color:#777;
-  border-top:1px solid #222;
+
   padding:30px 20px;
+
+  text-align:center;
+
+  color:#777;
+
+  border-top:1px solid #222;
+
 }
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
   nav{
-    padding:16px 18px;
+
+    height:68px;
+
+    padding:0 18px;
+
   }
 
-  .logo{
-    font-size:18px;
-    letter-spacing:2px;
+  .brand{
+
+    gap:9px;
+
+  }
+
+  .brand-mark{
+
+    width:39px;
+    height:39px;
+
+    font-size:15px;
+
+  }
+
+  .brand-name strong{
+
+    font-size:17px;
+
+    letter-spacing:3px;
+
+  }
+
+  .brand-name span{
+
+    font-size:8px;
+
+    letter-spacing:4px;
+
+    margin-top:4px;
+
   }
 
   .menu{
+
     display:none;
+
   }
 
+
   .hero{
+
     min-height:82svh;
-    align-items:flex-end;
-    background-position:center top;
+
+    background-position:center;
+
   }
 
   .hero-content{
-    padding:110px 22px 45px;
+
+    padding:
+
+    110px
+    20px
+    42px;
+
   }
 
   .kicker{
+
     font-size:11px;
+
     letter-spacing:3px;
-    margin-bottom:12px;
+
   }
 
   .hero h1{
-    font-size:48px;
+
+    font-size:46px;
+
     line-height:.96;
+
     letter-spacing:-1px;
+
   }
 
   .hero p{
+
     font-size:16px;
+
     line-height:1.55;
-    margin-top:18px;
+
+    margin-top:17px;
+
   }
 
-  .btn{
-    margin-top:22px;
-    padding:14px 22px;
-  }
 
   section{
-    padding:62px 18px;
+
+    padding:65px 18px;
+
   }
 
-  .service-grid,
-  .projects-grid,
-  .custom-wrap{
+
+  .service-grid{
+
     grid-template-columns:1fr;
+
   }
+
+
+  .projects-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
 
   .project{
-    height:280px;
+
+    height:290px;
+
   }
+
+
+  .custom-wrap{
+
+    grid-template-columns:1fr;
+
+  }
+
 
   .custom img{
-    height:320px;
+
+    height:330px;
+
   }
 
+
   h2{
+
     font-size:36px;
+
   }
 
 }
+
+
+/* SMALL PHONES */
 
 @media(max-width:430px){
 
   .hero{
-    min-height:78svh;
-  }
 
-  .hero-content{
-    padding-bottom:38px;
+    min-height:78svh;
+
   }
 
   .hero h1{
-    font-size:42px;
+
+    font-size:40px;
+
   }
 
   .hero p{
+
     font-size:15px;
+
   }
 
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">MODERN <span>ACM</span></div>
 
-    <div class="menu">
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#custom">Custom Work</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<!-- =========================
+HEADER
+========================= -->
+
+<header>
+
+<nav>
+
+<a href="#" class="brand">
+
+<div class="brand-mark">
+SB
+</div>
+
+<div class="brand-name">
+
+<strong>SID</strong>
+
+<span>BUILD</span>
+
+</div>
+
+</a>
+
+
+<div class="menu">
+
+<a href="#services">
+Services
+</a>
+
+<a href="#projects">
+Projects
+</a>
+
+<a href="#custom">
+Custom Work
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
+
+</nav>
+
 </header>
+
+
+<!-- =========================
+HERO
+========================= -->
 
 <section class="hero">
 
-  <div class="hero-content">
+<div class="hero-content">
 
-    <div class="kicker">
-      ACM Panels • Exterior Cladding
-    </div>
+<div class="kicker">
 
-    <h1>
-      Modern Exterior Cladding
-    </h1>
+ACM PANELS • EXTERIOR CLADDING
 
-    <p>
-      Professional aluminum composite panel installation,
-      fabrication and exterior cladding for commercial
-      and residential projects.
-    </p>
+</div>
 
-    <a class="btn" href="#projects">
-      VIEW OUR WORK
-    </a>
 
-  </div>
+<h1>
+
+Modern Exterior Cladding
+
+</h1>
+
+
+<p>
+
+Professional aluminum composite panel installation,
+fabrication and exterior cladding for commercial
+and residential projects.
+
+</p>
+
+
+<a class="btn" href="#projects">
+
+VIEW OUR WORK
+
+</a>
+
+</div>
 
 </section>
+
+
+<!-- =========================
+SERVICES
+========================= -->
 
 <section class="services" id="services">
 
-  <div class="container">
+<div class="container">
 
-    <div class="small">
-      Our Services
-    </div>
+<div class="small">
 
-    <h2>
-      ACM Cladding Solutions
-    </h2>
+OUR SERVICES
 
-    <p class="intro">
-      Modern exterior finishing with clean panel lines,
-      precise fabrication and professional installation.
-    </p>
+</div>
 
-    <div class="service-grid">
 
-      <div class="service">
-        <h3>ACM Panel Installation</h3>
-        <p>
-          Installation of aluminum composite panels for walls,
-          entrances, columns, canopies and architectural features.
-        </p>
-      </div>
+<h2>
 
-      <div class="service">
-        <h3>Commercial Cladding</h3>
-        <p>
-          Exterior cladding solutions for offices, retail buildings,
-          commercial properties and industrial projects.
-        </p>
-      </div>
+ACM Cladding Solutions
 
-      <div class="service">
-        <h3>Custom Fabrication</h3>
-        <p>
-          Custom corners, trims, reveals and specialty
-          architectural panel designs.
-        </p>
-      </div>
+</h2>
 
-    </div>
 
-  </div>
+<p class="intro">
+
+Modern exterior finishing with clean panel lines,
+precise fabrication and professional installation.
+
+</p>
+
+
+<div class="service-grid">
+
+
+<div class="service">
+
+<h3>
+
+ACM Panel Installation
+
+</h3>
+
+<p>
+
+Professional installation of aluminum composite panels
+for exterior walls, entrances, columns, canopies and
+architectural features.
+
+</p>
+
+</div>
+
+
+<div class="service">
+
+<h3>
+
+Commercial Cladding
+
+</h3>
+
+<p>
+
+Exterior cladding solutions for offices, retail buildings,
+commercial properties and industrial projects.
+
+</p>
+
+</div>
+
+
+<div class="service">
+
+<h3>
+
+Custom Fabrication
+
+</h3>
+
+<p>
+
+Custom corners, trims, reveals and specialty
+architectural panel designs.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
+
+
+<!-- =========================
+PROJECTS
+========================= -->
 
 <section id="projects">
 
-  <div class="container">
+<div class="container">
 
-    <div class="small">
-      Our Work
-    </div>
+<div class="small">
 
-    <h2>
-      Featured Projects
-    </h2>
+OUR WORK
 
-    <div class="projects-grid">
+</div>
 
-      <div class="project">
-        <img src="acm2.jpg" alt="ACM Project">
-        <div class="project-title">
-          Modern Grey ACM Facade
-        </div>
-      </div>
 
-      <div class="project">
-        <img src="acm3.jpg" alt="ACM Project">
-        <div class="project-title">
-          Architectural ACM Cladding
-        </div>
-      </div>
+<h2>
 
-      <div class="project">
-        <img src="acm4.jpg" alt="ACM Project">
-        <div class="project-title">
-          Commercial ACM Project
-        </div>
-      </div>
+Featured Projects
 
-      <div class="project">
-        <img src="acm1.jpg" alt="ACM Project">
-        <div class="project-title">
-          Clean Panel Detailing
-        </div>
-      </div>
+</h2>
 
-    </div>
 
-  </div>
+<p class="intro">
+
+A selection of modern ACM panel and exterior
+cladding projects.
+
+</p>
+
+
+<div class="projects-grid">
+
+
+<div class="project">
+
+<img
+src="acm2.jpg"
+alt="Modern ACM facade">
+
+<div class="project-title">
+
+Modern Grey ACM Facade
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="acm3.jpg"
+alt="Architectural ACM cladding">
+
+<div class="project-title">
+
+Architectural ACM Cladding
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="acm4.jpg"
+alt="Commercial ACM project">
+
+<div class="project-title">
+
+Commercial ACM Project
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="acm1.jpg"
+alt="ACM panel detailing">
+
+<div class="project-title">
+
+Clean Panel Detailing
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+CUSTOM ACM
+========================= -->
+
+<section
+class="custom"
+id="custom">
+
+<div class="container custom-wrap">
+
+
+<div>
+
+<div class="small">
+
+CUSTOM ACM
+
+</div>
+
+
+<h2>
+
+Custom Architectural Panel Design
+
+</h2>
+
+
+<p>
+
+ACM panels can be used for modern facades,
+custom colors, patterns, architectural shapes
+and unique exterior finishes.
+
+</p>
+
+
+<a
+class="btn"
+href="#contact">
+
+REQUEST A QUOTE
+
+</a>
+
+</div>
+
+
+<div>
+
+<img
+src="acm5.jpg"
+alt="Custom ACM panel design">
+
+</div>
+
+
+</div>
 
 </section>
 
-<section class="custom" id="custom">
 
-  <div class="container custom-wrap">
+<!-- =========================
+CONTACT
+========================= -->
 
-    <div>
+<section
+class="contact"
+id="contact">
 
-      <div class="small">
-        Custom ACM
-      </div>
+<div class="container">
 
-      <h2>
-        Custom Architectural Panel Design
-      </h2>
 
-      <p>
-        ACM panels can be used for modern facades,
-        custom colors, patterns, architectural shapes
-        and unique exterior finishes.
-      </p>
+<div class="small">
 
-      <a class="btn" href="#contact">
-        REQUEST A QUOTE
-      </a>
+CONTACT SID BUILD
 
-    </div>
+</div>
 
-    <div>
-      <img src="acm5.jpg" alt="Custom ACM Project">
-    </div>
 
-  </div>
+<h2>
 
-</section>
+Have an ACM Project?
 
-<section class="contact" id="contact">
+</h2>
 
-  <div class="container">
 
-    <div class="small">
-      Contact
-    </div>
+<p class="intro">
 
-    <h2>
-      Have an ACM Project?
-    </h2>
+Contact SID BUILD for residential and commercial
+ACM panel installation, fabrication and exterior
+cladding projects.
 
-    <p class="intro">
-      Contact us for residential and commercial ACM panel
-      installation and exterior cladding projects.
-    </p>
+</p>
 
-    <a class="btn" href="mailto:info@example.com">
-      GET A QUOTE
-    </a>
 
-  </div>
+<a
+class="btn"
+href="mailto:info@example.com">
+
+GET A QUOTE
+
+</a>
+
+
+</div>
 
 </section>
+
+
+<!-- =========================
+FOOTER
+========================= -->
 
 <footer>
-  © 2026 Modern ACM
+
+© 2026 SID BUILD • ACM & Exterior Cladding
+
 </footer>
 
+
 </body>
+
 </html>
