@@ -3,343 +3,583 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SID Build | ACM & Fluted Panels</title>
+
+<title>ACM Panel & Exterior Cladding</title>
 
 <style>
+
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-html{
-  scroll-behavior:smooth;
-}
+
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#fff;
-  color:#171717;
-  line-height:1.6;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
+    color:white;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* NAVIGATION */
+
 header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
-  background:rgba(12,12,12,.94);
-  padding:18px 7%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #333;
 }
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
 .logo{
-  color:#fff;
-  font-size:25px;
-  font-weight:800;
-  letter-spacing:4px;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:2px;
 }
+
+.logo span{
+    color:#aaa;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:28px;
+}
+
 nav a{
-  color:#fff;
-  text-decoration:none;
-  margin-left:24px;
-  font-size:14px;
+    color:white;
+    text-decoration:none;
+    font-size:14px;
 }
+
+/* HERO */
+
 .hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  background:
-  linear-gradient(90deg,rgba(0,0,0,.76),rgba(0,0,0,.25)),
-  url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85');
-  background-size:cover;
-  background-position:center;
-  color:#fff;
-  padding:120px 8% 70px;
+    height:100vh;
+    min-height:650px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.25)
+    ),
+    url("acm1.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
 }
+
 .hero-content{
-  max-width:760px;
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:100px 25px 30px;
 }
-.small-title{
-  text-transform:uppercase;
-  letter-spacing:4px;
-  font-size:13px;
-  margin-bottom:16px;
+
+.hero-small{
+    text-transform:uppercase;
+    letter-spacing:3px;
+    color:#bbb;
+    margin-bottom:18px;
 }
+
 .hero h1{
-  font-size:64px;
-  line-height:1.05;
-  margin-bottom:22px;
+    font-size:clamp(48px,8vw,90px);
+    max-width:800px;
+    line-height:.95;
+    text-transform:uppercase;
 }
+
 .hero p{
-  font-size:20px;
-  max-width:650px;
-  margin-bottom:34px;
+    margin-top:25px;
+    max-width:600px;
+    color:#ddd;
+    font-size:19px;
+    line-height:1.6;
 }
-.btn{
-  display:inline-block;
-  padding:15px 28px;
-  background:#fff;
-  color:#111;
-  text-decoration:none;
-  font-weight:700;
-  margin-right:10px;
+
+.button{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 28px;
+    background:white;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
 }
-.btn-dark{
-  background:#111;
-  color:#fff;
+
+/* SECTIONS */
+
+section{
+    padding:100px 25px;
 }
-.section{
-  padding:90px 8%;
+
+.container{
+    max-width:1200px;
+    margin:auto;
 }
-.section-title{
-  max-width:700px;
-  margin-bottom:45px;
+
+.section-small{
+    color:#999;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:13px;
 }
-.section-title span{
-  font-size:13px;
-  letter-spacing:3px;
-  text-transform:uppercase;
+
+h2{
+    font-size:clamp(38px,6vw,60px);
+    margin-top:10px;
 }
-.section-title h2{
-  font-size:42px;
-  line-height:1.15;
-  margin-top:10px;
+
+.description{
+    color:#aaa;
+    max-width:700px;
+    margin-top:18px;
+    font-size:17px;
 }
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
+
+/* SERVICES */
+
+.services{
+    background:#151515;
 }
-.card{
-  background:#f6f6f6;
-  overflow:hidden;
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:45px;
 }
-.card img{
-  width:100%;
-  height:330px;
-  object-fit:cover;
-  display:block;
+
+.service{
+    padding:35px;
+    background:#1d1d1d;
+    border:1px solid #303030;
 }
-.card-content{
-  padding:28px;
+
+.service h3{
+    font-size:23px;
+    margin-bottom:15px;
 }
-.card h3{
-  font-size:24px;
-  margin-bottom:10px;
+
+.service p{
+    color:#aaa;
+    line-height:1.7;
 }
-.dark{
-  background:#101010;
-  color:#fff;
+
+/* PROJECTS */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:45px;
 }
-.features{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:25px;
+
+.project{
+    position:relative;
+    height:420px;
+    overflow:hidden;
 }
-.feature{
-  border-top:1px solid #555;
-  padding-top:20px;
+
+.project img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
 }
-.feature strong{
-  display:block;
-  font-size:20px;
-  margin-bottom:8px;
+
+.project:hover img{
+    transform:scale(1.04);
 }
-.gallery{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  grid-template-rows:320px 320px;
-  gap:12px;
+
+.project-title{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:60px 25px 22px;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+
+    font-size:22px;
+    font-weight:bold;
 }
-.gallery img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+
+/* CUSTOM */
+
+.custom{
+    background:#eee;
+    color:#111;
 }
-.gallery img:first-child{
-  grid-row:1/3;
+
+.custom-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
+
+.custom img{
+    width:100%;
+    max-height:600px;
+    object-fit:cover;
+}
+
+.custom p{
+    color:#555;
+    margin-top:20px;
+    line-height:1.7;
+    font-size:17px;
+}
+
+/* CONTACT */
+
 .contact{
-  text-align:center;
-  background:#efefef;
+    text-align:center;
 }
-.contact h2{
-  font-size:44px;
-  margin-bottom:14px;
-}
+
 .contact p{
-  margin-bottom:30px;
+    color:#aaa;
+    margin:20px auto;
+    max-width:650px;
 }
+
+/* FOOTER */
+
 footer{
-  background:#0d0d0d;
-  color:#aaa;
-  padding:30px 8%;
-  text-align:center;
-  font-size:13px;
+    text-align:center;
+    padding:35px;
+    border-top:1px solid #222;
+    color:#777;
 }
+
+/* MOBILE */
+
 @media(max-width:800px){
-  nav{display:none;}
-  .hero h1{font-size:43px;}
-  .hero p{font-size:17px;}
-  .cards{grid-template-columns:1fr;}
-  .features{grid-template-columns:1fr 1fr;}
-  .gallery{
-    grid-template-columns:1fr;
-    grid-template-rows:auto;
-  }
-  .gallery img,
-  .gallery img:first-child{
-    height:300px;
-    grid-row:auto;
-  }
-  .section-title h2{font-size:34px;}
-  .contact h2{font-size:34px;}
+
+    nav ul{
+        display:none;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    .custom-content{
+        grid-template-columns:1fr;
+    }
+
+    .project{
+        height:300px;
+    }
+
+    section{
+        padding:70px 18px;
+    }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
 <header>
-  <div class="logo">SID BUILD</div>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#systems">Systems</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
+
+<nav>
+
+<div class="logo">
+MODERN <span>ACM</span>
+</div>
+
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#custom">Custom Work</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
 </header>
 
+
+<!-- HERO -->
+
 <section class="hero">
-  <div class="hero-content">
-    <div class="small-title">Modern Exterior Cladding</div>
 
-    <h1>ACM & Fluted Panel Specialists</h1>
+<div class="hero-content">
 
-    <p>
-      Modern exterior cladding solutions for commercial and residential
-      buildings across the Greater Toronto Area.
-    </p>
+<div class="hero-small">
+ACM Panels • Exterior Cladding
+</div>
 
-    <a href="#contact" class="btn">GET A FREE QUOTE</a>
-    <a href="#services" class="btn btn-dark">OUR SERVICES</a>
-  </div>
-</section>
+<h1>
+Modern Exterior
+Cladding
+</h1>
 
-<section class="section" id="services">
+<p>
+Professional aluminum composite panel installation,
+fabrication and exterior cladding for commercial
+and residential projects.
+</p>
 
-  <div class="section-title">
-    <span>What We Do</span>
-    <h2>Modern exterior systems built with precision.</h2>
-  </div>
+<a class="button" href="#projects">
+VIEW OUR WORK
+</a>
 
-  <div class="cards">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85">
-      <div class="card-content">
-        <h3>ACM Panels</h3>
-        <p>
-          Aluminum Composite Material panel installation for modern
-          commercial façades, entrances, columns and architectural features.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1000&q=85">
-      <div class="card-content">
-        <h3>Fluted Panels</h3>
-        <p>
-          Contemporary fluted metal panel systems available in modern
-          profiles and finishes for exterior applications.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85">
-      <div class="card-content">
-        <h3>Custom Cladding</h3>
-        <p>
-          Detail-focused exterior finishing for façades, soffits,
-          entrances and architectural accents.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="section dark" id="systems">
-
-  <div class="section-title">
-    <span>SID Build</span>
-    <h2>Clean lines. Accurate installation. Modern results.</h2>
-  </div>
-
-  <div class="features">
-
-    <div class="feature">
-      <strong>ACM Façades</strong>
-      Commercial and residential exterior panel systems.
-    </div>
-
-    <div class="feature">
-      <strong>Fluted Cladding</strong>
-      Vertical and horizontal architectural panel applications.
-    </div>
-
-    <div class="feature">
-      <strong>Entrances & Canopies</strong>
-      Modern ACM finishing for storefronts and building entrances.
-    </div>
-
-    <div class="feature">
-      <strong>Soffit & Details</strong>
-      Clean exterior finishing and custom architectural details.
-    </div>
-
-  </div>
-</section>
-
-<section class="section" id="gallery">
-
-  <div class="section-title">
-    <span>Design Inspiration</span>
-    <h2>Modern façade and cladding styles.</h2>
-  </div>
-
-  <div class="gallery">
-
-    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85">
-
-    <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=85">
-
-    <img src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=800&q=85">
-
-    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=85">
-
-    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=85">
-
-  </div>
-</section>
-
-<section class="section contact" id="contact">
-
-  <h2>Have a project in mind?</h2>
-
-  <p>
-    Contact SID Build for ACM, fluted panel and exterior cladding estimates.
-  </p>
-
-  <a href="tel:+10000000000" class="btn btn-dark">CALL FOR A QUOTE</a>
+</div>
 
 </section>
+
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-small">
+Our Services
+</div>
+
+<h2>
+ACM Cladding Solutions
+</h2>
+
+<p class="description">
+Modern exterior finishing with precise fabrication,
+clean panel lines and professional installation.
+</p>
+
+
+<div class="service-grid">
+
+<div class="service">
+
+<h3>ACM Panel Installation</h3>
+
+<p>
+Professional installation of aluminum composite
+panels for exterior walls, entrances, columns,
+canopies and architectural features.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<h3>Commercial Cladding</h3>
+
+<p>
+Modern exterior cladding solutions for offices,
+retail buildings, commercial properties and
+industrial projects.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<h3>Custom Fabrication</h3>
+
+<p>
+Custom panel fabrication including corners,
+trims, reveals and specialty architectural
+panel designs.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-small">
+Our Work
+</div>
+
+<h2>
+Featured Projects
+</h2>
+
+
+<div class="projects-grid">
+
+
+<div class="project">
+
+<img src="acm2.jpg">
+
+<div class="project-title">
+Modern Grey ACM Facade
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img src="acm3.jpg">
+
+<div class="project-title">
+Architectural ACM Cladding
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img src="acm4.jpg">
+
+<div class="project-title">
+Commercial ACM Project
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img src="acm1.jpg">
+
+<div class="project-title">
+Clean Panel Detailing
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CUSTOM -->
+
+<section class="custom" id="custom">
+
+<div class="container custom-content">
+
+<div>
+
+<div class="section-small">
+Custom ACM
+</div>
+
+<h2>
+Custom Architectural
+Panel Design
+</h2>
+
+<p>
+ACM panels can create much more than a standard
+exterior facade. Custom colors, patterns,
+panel sizes and architectural details can
+transform a building into a modern and
+distinctive design.
+</p>
+
+<a class="button" href="#contact">
+REQUEST A QUOTE
+</a>
+
+</div>
+
+
+<div>
+
+<img src="acm5.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-small">
+Contact Us
+</div>
+
+<h2>
+Have an ACM Project?
+</h2>
+
+<p>
+Contact us for residential and commercial
+ACM panel installation and exterior cladding projects.
+</p>
+
+<a class="button" href="mailto:info@example.com">
+GET A QUOTE
+</a>
+
+</div>
+
+</section>
+
 
 <footer>
-  © 2026 SID Build · ACM Panels · Fluted Panels · Exterior Cladding
+
+© 2026 ACM Panel & Exterior Cladding
+
 </footer>
+
 
 </body>
 </html>
