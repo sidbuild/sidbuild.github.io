@@ -1,223 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SID Build | Exterior Cladding</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SID Build | ACM & Fluted Panels</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #222;
-    }
-
-    header {
-      background: #111;
-      color: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-    }
-
-    .hero {
-      min-height: 75vh;
-      background: linear-gradient(
-        rgba(0,0,0,0.65),
-        rgba(0,0,0,0.65)
-      ),
-      url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');
-
-      background-size: cover;
-      background-position: center;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 30px;
-    }
-
-    .hero h1 {
-      font-size: 52px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      background: white;
-      color: #111;
-      padding: 14px 28px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .section {
-      padding: 70px 8%;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-size: 34px;
-      margin-bottom: 35px;
-    }
-
-    .services {
-      display: flex;
-      gap: 25px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .service {
-      width: 280px;
-      padding: 30px 20px;
-      border: 1px solid #ddd;
-    }
-
-    .service h3 {
-      margin-bottom: 15px;
-    }
-
-    .contact {
-      background: #f4f4f4;
-    }
-
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 25px;
-    }
-
-    @media(max-width: 700px) {
-      nav {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-    }
-  </style>
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+html{
+  scroll-behavior:smooth;
+}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fff;
+  color:#171717;
+  line-height:1.6;
+}
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(12,12,12,.94);
+  padding:18px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  color:#fff;
+  font-size:25px;
+  font-weight:800;
+  letter-spacing:4px;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:24px;
+  font-size:14px;
+}
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:
+  linear-gradient(90deg,rgba(0,0,0,.76),rgba(0,0,0,.25)),
+  url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85');
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  padding:120px 8% 70px;
+}
+.hero-content{
+  max-width:760px;
+}
+.small-title{
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:13px;
+  margin-bottom:16px;
+}
+.hero h1{
+  font-size:64px;
+  line-height:1.05;
+  margin-bottom:22px;
+}
+.hero p{
+  font-size:20px;
+  max-width:650px;
+  margin-bottom:34px;
+}
+.btn{
+  display:inline-block;
+  padding:15px 28px;
+  background:#fff;
+  color:#111;
+  text-decoration:none;
+  font-weight:700;
+  margin-right:10px;
+}
+.btn-dark{
+  background:#111;
+  color:#fff;
+}
+.section{
+  padding:90px 8%;
+}
+.section-title{
+  max-width:700px;
+  margin-bottom:45px;
+}
+.section-title span{
+  font-size:13px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.section-title h2{
+  font-size:42px;
+  line-height:1.15;
+  margin-top:10px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.card{
+  background:#f6f6f6;
+  overflow:hidden;
+}
+.card img{
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  display:block;
+}
+.card-content{
+  padding:28px;
+}
+.card h3{
+  font-size:24px;
+  margin-bottom:10px;
+}
+.dark{
+  background:#101010;
+  color:#fff;
+}
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+.feature{
+  border-top:1px solid #555;
+  padding-top:20px;
+}
+.feature strong{
+  display:block;
+  font-size:20px;
+  margin-bottom:8px;
+}
+.gallery{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  grid-template-rows:320px 320px;
+  gap:12px;
+}
+.gallery img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.gallery img:first-child{
+  grid-row:1/3;
+}
+.contact{
+  text-align:center;
+  background:#efefef;
+}
+.contact h2{
+  font-size:44px;
+  margin-bottom:14px;
+}
+.contact p{
+  margin-bottom:30px;
+}
+footer{
+  background:#0d0d0d;
+  color:#aaa;
+  padding:30px 8%;
+  text-align:center;
+  font-size:13px;
+}
+@media(max-width:800px){
+  nav{display:none;}
+  .hero h1{font-size:43px;}
+  .hero p{font-size:17px;}
+  .cards{grid-template-columns:1fr;}
+  .features{grid-template-columns:1fr 1fr;}
+  .gallery{
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+  }
+  .gallery img,
+  .gallery img:first-child{
+    height:300px;
+    grid-row:auto;
+  }
+  .section-title h2{font-size:34px;}
+  .contact h2{font-size:34px;}
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <div class="logo">SID BUILD</div>
-
   <nav>
-    <a href="#home">Home</a>
     <a href="#services">Services</a>
-    <a href="#about">About</a>
+    <a href="#systems">Systems</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero" id="home">
-  <div>
-    <h1>Built Right. Built to Last.</h1>
+<section class="hero">
+  <div class="hero-content">
+    <div class="small-title">Modern Exterior Cladding</div>
+
+    <h1>ACM & Fluted Panel Specialists</h1>
 
     <p>
-      Professional Exterior Cladding & Building Solutions
-      in the Greater Toronto Area
+      Modern exterior cladding solutions for commercial and residential
+      buildings across the Greater Toronto Area.
     </p>
 
-    <a class="button" href="#contact">
-      GET A FREE QUOTE
-    </a>
+    <a href="#contact" class="btn">GET A FREE QUOTE</a>
+    <a href="#services" class="btn btn-dark">OUR SERVICES</a>
   </div>
 </section>
 
 <section class="section" id="services">
 
-  <h2>Our Services</h2>
+  <div class="section-title">
+    <span>What We Do</span>
+    <h2>Modern exterior systems built with precision.</h2>
+  </div>
 
-  <div class="services">
+  <div class="cards">
 
-    <div class="service">
-      <h3>ACM Panels</h3>
-      <p>
-        Professional aluminum composite panel installation
-        for commercial and residential projects.
-      </p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85">
+      <div class="card-content">
+        <h3>ACM Panels</h3>
+        <p>
+          Aluminum Composite Material panel installation for modern
+          commercial façades, entrances, columns and architectural features.
+        </p>
+      </div>
     </div>
 
-    <div class="service">
-      <h3>Exterior Cladding</h3>
-      <p>
-        Modern exterior cladding installation with
-        attention to detail and durability.
-      </p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1000&q=85">
+      <div class="card-content">
+        <h3>Fluted Panels</h3>
+        <p>
+          Contemporary fluted metal panel systems available in modern
+          profiles and finishes for exterior applications.
+        </p>
+      </div>
     </div>
 
-    <div class="service">
-      <h3>Siding</h3>
-      <p>
-        Professional siding solutions for renovations
-        and new construction.
-      </p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85">
+      <div class="card-content">
+        <h3>Custom Cladding</h3>
+        <p>
+          Detail-focused exterior finishing for façades, soffits,
+          entrances and architectural accents.
+        </p>
+      </div>
     </div>
 
   </div>
-
 </section>
 
-<section class="section" id="about">
+<section class="section dark" id="systems">
 
-  <h2>About SID Build</h2>
+  <div class="section-title">
+    <span>SID Build</span>
+    <h2>Clean lines. Accurate installation. Modern results.</h2>
+  </div>
 
-  <p>
-    SID Build provides professional exterior cladding,
-    ACM panel and siding installation services across
-    the Greater Toronto Area.
-  </p>
+  <div class="features">
 
+    <div class="feature">
+      <strong>ACM Façades</strong>
+      Commercial and residential exterior panel systems.
+    </div>
+
+    <div class="feature">
+      <strong>Fluted Cladding</strong>
+      Vertical and horizontal architectural panel applications.
+    </div>
+
+    <div class="feature">
+      <strong>Entrances & Canopies</strong>
+      Modern ACM finishing for storefronts and building entrances.
+    </div>
+
+    <div class="feature">
+      <strong>Soffit & Details</strong>
+      Clean exterior finishing and custom architectural details.
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="gallery">
+
+  <div class="section-title">
+    <span>Design Inspiration</span>
+    <h2>Modern façade and cladding styles.</h2>
+  </div>
+
+  <div class="gallery">
+
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85">
+
+    <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=85">
+
+    <img src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=800&q=85">
+
+    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=85">
+
+    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=85">
+
+  </div>
 </section>
 
 <section class="section contact" id="contact">
 
-  <h2>Request a Free Quote</h2>
+  <h2>Have a project in mind?</h2>
 
   <p>
-    Have a project in mind?
-    Contact SID Build for a free estimate.
+    Contact SID Build for ACM, fluted panel and exterior cladding estimates.
   </p>
+
+  <a href="tel:+10000000000" class="btn btn-dark">CALL FOR A QUOTE</a>
 
 </section>
 
 <footer>
-  © 2026 SID Build. All Rights Reserved.
+  © 2026 SID Build · ACM Panels · Fluted Panels · Exterior Cladding
 </footer>
 
 </body>
