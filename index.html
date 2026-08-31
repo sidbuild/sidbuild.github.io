@@ -24,7 +24,6 @@ body{
     color:#fff;
 }
 
-
 /* ================= HEADER ================= */
 
 header{
@@ -61,7 +60,6 @@ header a:hover{
     color:#ff7100;
 }
 
-
 /* ================= LOGO ================= */
 
 .logo-center{
@@ -85,7 +83,6 @@ header a:hover{
     transform:scale(1.07);
 }
 
-
 /* ================= QUOTE ================= */
 
 .quote-btn{
@@ -99,7 +96,6 @@ header a:hover{
     background:#ff7100;
     color:white !important;
 }
-
 
 /* ================= HERO ================= */
 
@@ -177,7 +173,6 @@ header a:hover{
     padding:0 15px;
 }
 
-
 /* ================= BUTTONS ================= */
 
 .hero-buttons{
@@ -212,7 +207,6 @@ header a:hover{
 .btn-dark:hover{
     background:#ff7100;
 }
-
 
 /* ================= FEATURE BAR ================= */
 
@@ -253,8 +247,7 @@ header a:hover{
     line-height:1.6;
 }
 
-
-/* ================= GENERAL SECTIONS ================= */
+/* ================= GENERAL ================= */
 
 section{
     scroll-margin-top:110px;
@@ -284,7 +277,6 @@ section{
     margin-bottom:45px;
 }
 
-
 /* ================= ABOUT ================= */
 
 .about{
@@ -309,7 +301,6 @@ section{
     color:#aaa;
     line-height:1.9;
 }
-
 
 /* ================= SERVICES ================= */
 
@@ -341,10 +332,7 @@ section{
     line-height:1.7;
 }
 
-
-/* ================================================= */
-/* ================= MATERIALS ====================== */
-/* ================================================= */
+/* ================= MATERIALS ================= */
 
 .materials-section{
     background:#080808;
@@ -381,6 +369,7 @@ section{
     width:100%;
     height:100%;
     object-fit:cover;
+    display:block;
     transition:.5s;
 }
 
@@ -416,7 +405,6 @@ section{
     background:#ff7100;
     margin-top:20px;
 }
-
 
 /* ================= PROJECTS ================= */
 
@@ -465,7 +453,6 @@ section{
     letter-spacing:2px;
 }
 
-
 /* ================= CONTACT ================= */
 
 .contact{
@@ -486,7 +473,6 @@ section{
     margin-bottom:35px;
 }
 
-
 /* ================= FOOTER ================= */
 
 footer{
@@ -501,7 +487,6 @@ footer{
 footer strong{
     color:white;
 }
-
 
 /* ================= MOBILE MENU ================= */
 
@@ -520,9 +505,6 @@ footer strong{
     margin:7px;
 }
 
-
-/* ================= MOBILE NAV ================= */
-
 .mobile-nav{
     position:fixed;
     top:75px;
@@ -531,13 +513,11 @@ footer strong{
     height:calc(100% - 75px);
     background:#080808;
     z-index:9998;
-
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     gap:28px;
-
     transition:.4s;
 }
 
@@ -555,7 +535,6 @@ footer strong{
 .mobile-nav a:hover{
     color:#ff7100;
 }
-
 
 /* ================= TABLET ================= */
 
@@ -626,7 +605,6 @@ footer strong{
     }
 }
 
-
 /* ================= MOBILE ================= */
 
 @media(max-width:650px){
@@ -659,20 +637,14 @@ footer strong{
         grid-template-columns:1fr;
     }
 
-    .projects-grid{
+    .projects-grid,
+    .services-grid,
+    .materials-grid{
         grid-template-columns:1fr;
     }
 
     .project-card{
         height:360px;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-    .materials-grid{
-        grid-template-columns:1fr;
     }
 
     .material-image{
@@ -686,15 +658,12 @@ footer strong{
     .section-title{
         font-size:34px;
     }
-
 }
 
 </style>
 </head>
 
-
 <body>
-
 
 <!-- ================= HEADER ================= -->
 
@@ -707,18 +676,15 @@ footer strong{
         <a href="#materials">MATERIALS</a>
     </nav>
 
-
     <a href="#home" class="logo-center" aria-label="SID BUILD Home">
         <img src="logo.png" alt="SID BUILD Logo">
     </a>
-
 
     <nav class="nav-right">
         <a href="#projects">PROJECTS</a>
         <a href="#contact">CONTACT</a>
         <a href="#contact" class="quote-btn">GET A QUOTE</a>
     </nav>
-
 
     <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
         <span></span>
@@ -728,20 +694,16 @@ footer strong{
 
 </header>
 
-
 <!-- ================= MOBILE NAV ================= -->
 
 <div class="mobile-nav" id="mobileNav">
-
     <a href="#home">HOME</a>
     <a href="#about">ABOUT</a>
     <a href="#services">SERVICES</a>
     <a href="#materials">MATERIALS</a>
     <a href="#projects">PROJECTS</a>
     <a href="#contact">CONTACT</a>
-
 </div>
-
 
 <!-- ================= HOME ================= -->
 
@@ -769,7 +731,6 @@ footer strong{
             Installation
         </div>
 
-
         <div class="hero-buttons">
 
             <a href="#projects" class="btn btn-orange">
@@ -785,7 +746,6 @@ footer strong{
     </div>
 
 </section>
-
 
 <!-- ================= FEATURES ================= -->
 
@@ -817,7 +777,6 @@ footer strong{
 
 </section>
 
-
 <!-- ================= ABOUT ================= -->
 
 <section class="section section-dark" id="about">
@@ -838,7 +797,6 @@ footer strong{
 
         </div>
 
-
         <div class="about-box">
 
             <h3>Built With Precision</h3>
@@ -855,7 +813,6 @@ footer strong{
 
 </section>
 
-
 <!-- ================= SERVICES ================= -->
 
 <section class="section" id="services">
@@ -868,7 +825,6 @@ footer strong{
         Complete exterior cladding services from fabrication
         to final installation.
     </p>
-
 
     <div class="services-grid">
 
@@ -900,10 +856,7 @@ footer strong{
 
 </section>
 
-
-<!-- ================================================= -->
-<!-- ================= MATERIALS ====================== -->
-<!-- ================================================= -->
+<!-- ================= MATERIALS ================= -->
 
 <section class="section materials-section" id="materials">
 
@@ -916,359 +869,191 @@ footer strong{
         commercial and architectural projects.
     </p>
 
-
     <div class="materials-grid">
 
-
-        <!-- ACM -->
-
         <div class="material-card">
-
             <div class="material-image">
                 <img src="material-acm.jpg" alt="ACM Aluminum Composite Panels">
             </div>
-
             <div class="material-content">
                 <div class="material-number">01</div>
                 <h3>ACM PANELS</h3>
-
-                <p>
-                    Aluminum Composite Material panels for clean,
-                    modern architectural facades.
-                </p>
-
+                <p>Aluminum Composite Material panels for clean, modern architectural facades.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- LONGBOARD -->
-
         <div class="material-card">
-
             <div class="material-image">
                 <img src="material-longboard.jpg" alt="Longboard Aluminum Siding">
             </div>
-
             <div class="material-content">
                 <div class="material-number">02</div>
                 <h3>LONGBOARD</h3>
-
-                <p>
-                    Premium aluminum siding with modern wood-look
-                    architectural finishes.
-                </p>
-
+                <p>Premium aluminum siding with modern wood-look architectural finishes.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- FLUTED -->
-
         <div class="material-card">
-
             <div class="material-image">
                 <img src="material-fluted.jpg" alt="Fluted Aluminum Panels">
             </div>
-
             <div class="material-content">
                 <div class="material-number">03</div>
                 <h3>FLUTED PANELS</h3>
-
-                <p>
-                    Architectural fluted profiles creating depth,
-                    texture and modern vertical lines.
-                </p>
-
+                <p>Architectural fluted profiles creating depth, texture and modern vertical lines.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- ALUMINUM SIDING -->
-
         <div class="material-card">
-
             <div class="material-image">
                 <img src="material-aluminum.jpg" alt="Aluminum Siding">
             </div>
-
             <div class="material-content">
                 <div class="material-number">04</div>
                 <h3>ALUMINUM SIDING</h3>
-
-                <p>
-                    Durable aluminum siding available in modern
-                    architectural profiles and finishes.
-                </p>
-
+                <p>Durable aluminum siding available in modern architectural profiles and finishes.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- BOARD AND BATTEN -->
-
         <div class="material-card">
-
             <div class="material-image">
-                <img src="material-board-batten.jpg" alt="Board and Batten">
+                <img src="material-boardbatten.jpg" alt="Board and Batten">
             </div>
-
             <div class="material-content">
                 <div class="material-number">05</div>
                 <h3>BOARD & BATTEN</h3>
-
-                <p>
-                    Modern vertical siding providing strong lines
-                    and a clean architectural appearance.
-                </p>
-
+                <p>Modern vertical siding providing strong lines and a clean architectural appearance.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- METAL CLADDING -->
-
         <div class="material-card">
-
             <div class="material-image">
                 <img src="material-metal.jpg" alt="Metal Cladding">
             </div>
-
             <div class="material-content">
                 <div class="material-number">06</div>
                 <h3>METAL CLADDING</h3>
-
-                <p>
-                    Durable architectural metal systems for
-                    residential and commercial exteriors.
-                </p>
-
+                <p>Durable architectural metal systems for residential and commercial exteriors.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- CORRUGATED -->
-
         <div class="material-card">
-
             <div class="material-image">
                 <img src="material-corrugated.jpg" alt="Corrugated Metal">
             </div>
-
             <div class="material-content">
                 <div class="material-number">07</div>
                 <h3>CORRUGATED METAL</h3>
-
-                <p>
-                    Profiled metal cladding for contemporary,
-                    commercial and industrial architecture.
-                </p>
-
+                <p>Profiled metal cladding for contemporary, commercial and industrial architecture.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- FIBER CEMENT -->
-
         <div class="material-card">
-
             <div class="material-image">
-                <img src="material-fiber-cement.jpg" alt="Fiber Cement">
+                <img src="material-fibercement.jpg" alt="Fiber Cement">
             </div>
-
             <div class="material-content">
                 <div class="material-number">08</div>
                 <h3>FIBER CEMENT</h3>
-
-                <p>
-                    Durable exterior panels and siding with
-                    clean contemporary finishes.
-                </p>
-
+                <p>Durable exterior panels and siding with clean contemporary finishes.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- WPC -->
-
         <div class="material-card">
-
             <div class="material-image">
                 <img src="material-wpc.jpg" alt="WPC Cladding">
             </div>
-
             <div class="material-content">
                 <div class="material-number">09</div>
                 <h3>WPC CLADDING</h3>
-
-                <p>
-                    Wood-plastic composite exterior cladding
-                    with modern wood-style finishes.
-                </p>
-
+                <p>Wood-plastic composite exterior cladding with modern wood-style finishes.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- HPL -->
-
         <div class="material-card">
-
             <div class="material-image">
                 <img src="material-hpl.jpg" alt="HPL Panels">
             </div>
-
             <div class="material-content">
                 <div class="material-number">10</div>
                 <h3>HPL PANELS</h3>
-
-                <p>
-                    Architectural high-pressure laminate panels
-                    for contemporary rainscreen facades.
-                </p>
-
+                <p>Architectural high-pressure laminate panels for contemporary rainscreen facades.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- PERFORATED -->
-
         <div class="material-card">
-
             <div class="material-image">
                 <img src="material-perforated.jpg" alt="Perforated Aluminum Panels">
             </div>
-
             <div class="material-content">
                 <div class="material-number">11</div>
                 <h3>PERFORATED PANELS</h3>
-
-                <p>
-                    Custom perforated aluminum panels for
-                    screens, facades and architectural details.
-                </p>
-
+                <p>Custom perforated aluminum panels for screens, facades and architectural details.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- CORTEN -->
-
         <div class="material-card">
-
             <div class="material-image">
-                <img src="material-corten.jpg" alt="Corten Steel">
+                <img src="material-cortensteel.jpg" alt="Corten Steel">
             </div>
-
             <div class="material-content">
                 <div class="material-number">12</div>
                 <h3>CORTEN STEEL</h3>
-
-                <p>
-                    Weathering steel with a distinctive
-                    architectural patina finish.
-                </p>
-
+                <p>Weathering steel with a distinctive architectural patina finish.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- SOFFIT -->
-
         <div class="material-card">
-
             <div class="material-image">
                 <img src="material-soffit.jpg" alt="Aluminum Soffit">
             </div>
-
             <div class="material-content">
                 <div class="material-number">13</div>
                 <h3>ALUMINUM SOFFIT</h3>
-
-                <p>
-                    Clean aluminum soffit systems including
-                    wood-look and contemporary finishes.
-                </p>
-
+                <p>Clean aluminum soffit systems including wood-look and contemporary finishes.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- FASCIA -->
-
         <div class="material-card">
-
             <div class="material-image">
-                <img src="material-fascia.jpg" alt="Aluminum Fascia">
+                <img src="material-fasciatrim.jpg" alt="Aluminum Fascia and Trim">
             </div>
-
             <div class="material-content">
                 <div class="material-number">14</div>
                 <h3>FASCIA & TRIM</h3>
-
-                <p>
-                    Custom aluminum fascia, flashing and trim
-                    for clean exterior finishing.
-                </p>
-
+                <p>Custom aluminum fascia, flashing and trim for clean exterior finishing.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
 
-
-        <!-- CANOPY -->
-
         <div class="material-card">
-
             <div class="material-image">
                 <img src="material-canopy.jpg" alt="Architectural Canopy">
             </div>
-
             <div class="material-content">
                 <div class="material-number">15</div>
                 <h3>CANOPY CLADDING</h3>
-
-                <p>
-                    Custom exterior canopy finishes using
-                    aluminum and architectural metal systems.
-                </p>
-
+                <p>Custom exterior canopy finishes using aluminum and architectural metal systems.</p>
                 <div class="material-line"></div>
             </div>
-
         </div>
-
 
     </div>
 
 </section>
-
 
 <!-- ================= PROJECTS ================= -->
 
@@ -1282,48 +1067,35 @@ footer strong{
         Quality work speaks for itself.
     </p>
 
-
     <div class="projects-grid">
 
         <div class="project-card">
-
             <img src="project1.jpg" alt="SID BUILD ACM Project">
-
             <div class="project-overlay">
                 <h3>Modern ACM Exterior</h3>
                 <p>ACM CLADDING</p>
             </div>
-
         </div>
 
-
         <div class="project-card">
-
             <img src="project2.jpg" alt="SID BUILD Exterior Project">
-
             <div class="project-overlay">
                 <h3>Commercial Facade</h3>
                 <p>EXTERIOR CLADDING</p>
             </div>
-
         </div>
 
-
         <div class="project-card">
-
             <img src="project3.jpg" alt="SID BUILD Cladding Project">
-
             <div class="project-overlay">
                 <h3>Architectural Panels</h3>
                 <p>DESIGN & INSTALLATION</p>
             </div>
-
         </div>
 
     </div>
 
 </section>
-
 
 <!-- ================= CONTACT ================= -->
 
@@ -1337,23 +1109,17 @@ footer strong{
         Contact SID BUILD for your next exterior cladding project.
     </p>
 
-    <a href="mailto:info@sidbuild.ca"
-       class="btn btn-orange">
+    <a href="mailto:info@sidbuild.ca" class="btn btn-orange">
         GET A QUOTE
     </a>
 
 </section>
 
-
 <!-- ================= FOOTER ================= -->
 
 <footer>
-
-    © 2026 <strong>SID BUILD</strong>.
-    All Rights Reserved.
-
+    © 2026 <strong>SID BUILD</strong>. All Rights Reserved.
 </footer>
-
 
 <script>
 
@@ -1361,25 +1127,16 @@ const menuBtn = document.getElementById("menuBtn");
 const mobileNav = document.getElementById("mobileNav");
 
 menuBtn.addEventListener("click", function(){
-
     mobileNav.classList.toggle("active");
-
 });
 
-
-document.querySelectorAll(".mobile-nav a")
-.forEach(function(link){
-
+document.querySelectorAll(".mobile-nav a").forEach(function(link){
     link.addEventListener("click", function(){
-
         mobileNav.classList.remove("active");
-
     });
-
 });
 
 </script>
-
 
 </body>
 </html>
