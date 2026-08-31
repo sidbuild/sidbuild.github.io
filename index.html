@@ -32,7 +32,7 @@ header{
   left:0;
   width:100%;
   z-index:1000;
-  background:rgba(7,7,7,.92);
+  background:rgba(7,7,7,.94);
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
   border-bottom:1px solid rgba(255,255,255,.1);
@@ -41,8 +41,8 @@ header{
 nav{
   max-width:1200px;
   margin:auto;
-  height:76px;
-  padding:0 22px;
+  height:94px;
+  padding:0 28px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -52,13 +52,16 @@ nav{
   display:flex;
   align-items:center;
   text-decoration:none;
+  overflow:visible;
 }
 
 .logo-wrap img{
-  height:54px;
+  height:78px;
   width:auto;
   display:block;
   object-fit:contain;
+  transform:scale(1.35);
+  transform-origin:left center;
 }
 
 .menu{
@@ -73,6 +76,10 @@ nav{
   font-weight:600;
   text-transform:uppercase;
   letter-spacing:1px;
+}
+
+.menu a:hover{
+  color:#f47b20;
 }
 
 /* HERO */
@@ -97,7 +104,7 @@ nav{
   max-width:1200px;
   width:100%;
   margin:auto;
-  padding:140px 24px 70px;
+  padding:165px 24px 70px;
 }
 
 .kicker{
@@ -285,12 +292,14 @@ footer{
 @media(max-width:800px){
 
   nav{
-    height:68px;
+    height:86px;
     padding:0 16px;
   }
 
   .logo-wrap img{
-    height:46px;
+    height:66px;
+    transform:scale(1.45);
+    transform-origin:left center;
   }
 
   .menu{
@@ -303,7 +312,7 @@ footer{
   }
 
   .hero-content{
-    padding:108px 20px 42px;
+    padding:130px 20px 42px;
   }
 
   .kicker{
@@ -347,6 +356,15 @@ footer{
 }
 
 @media(max-width:430px){
+
+  nav{
+    height:82px;
+  }
+
+  .logo-wrap img{
+    height:62px;
+    transform:scale(1.48);
+  }
 
   .hero{
     min-height:78svh;
