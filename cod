@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SID BUILD | Modern Cladding Solutions</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0a0a0a;
+    color:#fff;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:82px;
+    background:rgba(8,8,8,.96);
+    border-bottom:1px solid #333;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 6%;
+    z-index:9999;
+}
+
+
+/* LEFT NAV */
+
+.nav-left,
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:38px;
+}
+
+header a{
+    text-decoration:none;
+    color:white;
+    font-size:13px;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+header a:hover{
+    color:#ff7100;
+}
+
+
+/* ================= CENTER LOGO ================= */
+
+.logo-center{
+    position:absolute;
+    left:50%;
+    top:8px;
+    transform:translateX(-50%);
+    z-index:10001;
+}
+
+.logo-center img{
+    width:105px;
+    height:105px;
+    object-fit:contain;
+    border-radius:50%;
+    transition:.3s;
+    filter:drop-shadow(0 5px 10px rgba(0,0,0,.7));
+}
+
+.logo-center img:hover{
+    transform:scale(1.07);
+}
+
+
+/* QUOTE BUTTON */
+
+.quote-btn{
+    border:1px solid #ff7100;
+    padding:13px 27px;
+    border-radius:5px;
+    color:#ff7100 !important;
+}
+
+.quote-btn:hover{
+    background:#ff7100;
+    color:white !important;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:760px;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.92) 0%,
+        rgba(0,0,0,.72) 35%,
+        rgba(0,0,0,.15) 75%
+    ),
+    url("hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:150px 10% 80px;
+}
+
+
+.hero-content{
+    max-width:700px;
+}
+
+
+.site-name{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:12px;
+}
+
+
+.site-name h1{
+    font-size:88px;
+    font-weight:900;
+    letter-spacing:-4px;
+    line-height:.9;
+}
+
+
+.orange-i{
+    color:#ff7100;
+}
+
+
+.hero h2{
+    font-size:52px;
+    line-height:1;
+    margin-bottom:20px;
+}
+
+
+.subtitle{
+    font-size:19px;
+    letter-spacing:7px;
+    color:#ddd;
+    margin-bottom:25px;
+}
+
+
+.orange-line{
+    width:200px;
+    height:4px;
+    background:#ff7100;
+    margin-bottom:26px;
+}
+
+
+.services-line{
+    color:#bbb;
+    font-size:17px;
+    letter-spacing:2px;
+    margin-bottom:35px;
+}
+
+.services-line span{
+    color:#ff7100;
+    padding:0 15px;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+}
+
+.btn{
+    padding:17px 35px;
+    border-radius:5px;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:13px;
+    transition:.3s;
+}
+
+.btn-orange{
+    background:#ff7100;
+    color:white;
+}
+
+.btn-orange:hover{
+    background:#ff8a25;
+}
+
+.btn-dark{
+    border:1px solid #ff7100;
+    color:white;
+}
+
+.btn-dark:hover{
+    background:#ff7100;
+}
+
+
+/* ================= FEATURE BAR ================= */
+
+.features{
+    background:#0b0b0b;
+    border-top:1px solid #333;
+    border-bottom:1px solid #333;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    padding:45px 7%;
+}
+
+.feature{
+    text-align:center;
+    padding:10px 30px;
+    border-right:1px solid #333;
+}
+
+.feature:last-child{
+    border:none;
+}
+
+.feature-icon{
+    font-size:38px;
+    color:#ff7100;
+    margin-bottom:15px;
+}
+
+.feature h3{
+    font-size:16px;
+    letter-spacing:1px;
+    margin-bottom:10px;
+}
+
+.feature p{
+    font-size:13px;
+    color:#aaa;
+    line-height:1.6;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section{
+    scroll-margin-top:110px;
+}
+
+.section{
+    padding:100px 8%;
+}
+
+.section-dark{
+    background:#0c0c0c;
+}
+
+.section-title{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.section-title span{
+    color:#ff7100;
+}
+
+.section-desc{
+    color:#999;
+    max-width:650px;
+    line-height:1.8;
+    margin-bottom:45px;
+}
+
+
+/* ================= PROJECTS ================= */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.project-card{
+    height:400px;
+    overflow:hidden;
+    position:relative;
+    border-radius:8px;
+    background:#222;
+}
+
+.project-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.project-card:hover img{
+    transform:scale(1.06);
+}
+
+.project-overlay{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:30px;
+    background:linear-gradient(transparent,rgba(0,0,0,.95));
+}
+
+.project-overlay h3{
+    font-size:21px;
+    margin-bottom:5px;
+}
+
+.project-overlay p{
+    color:#ff7100;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-box{
+    background:#111;
+    padding:50px;
+    border-left:4px solid #ff7100;
+}
+
+.about-box h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.about-box p{
+    color:#aaa;
+    line-height:1.9;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service-card{
+    background:#111;
+    border:1px solid #222;
+    padding:40px;
+    transition:.3s;
+}
+
+.service-card:hover{
+    border-color:#ff7100;
+    transform:translateY(-5px);
+}
+
+.service-card h3{
+    color:#ff7100;
+    margin-bottom:15px;
+}
+
+.service-card p{
+    color:#aaa;
+    line-height:1.7;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact{
+    text-align:center;
+}
+
+.contact h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.contact h2 span{
+    color:#ff7100;
+}
+
+.contact p{
+    color:#aaa;
+    margin-bottom:35px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#050505;
+    border-top:1px solid #222;
+    padding:35px;
+    text-align:center;
+    color:#777;
+    font-size:13px;
+}
+
+footer strong{
+    color:white;
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+.menu-btn span{
+    display:block;
+    width:30px;
+    height:2px;
+    background:white;
+    margin:7px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:1000px){
+
+    header{
+        height:75px;
+        padding:0 25px;
+    }
+
+    .nav-left,
+    .nav-right{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+        margin-left:auto;
+    }
+
+    .logo-center{
+        left:25px;
+        transform:none;
+        top:8px;
+    }
+
+    .logo-center img{
+        width:78px;
+        height:78px;
+    }
+
+    .hero{
+        min-height:700px;
+        padding:150px 8% 70px;
+    }
+
+    .site-name h1{
+        font-size:65px;
+    }
+
+    .hero h2{
+        font-size:38px;
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .feature{
+        border:none;
+        border-bottom:1px solid #222;
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+
+@media(max-width:650px){
+
+    .hero{
+        min-height:680px;
+        background-position:center;
+    }
+
+    .site-name h1{
+        font-size:53px;
+        letter-spacing:-2px;
+    }
+
+    .hero h2{
+        font-size:31px;
+    }
+
+    .subtitle{
+        font-size:13px;
+        letter-spacing:4px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        max-width:260px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project-card{
+        height:360px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:80px 7%;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+}
+
+
+/* MOBILE NAV */
+
+.mobile-nav{
+    position:fixed;
+    top:75px;
+    right:-100%;
+    width:100%;
+    height:calc(100% - 75px);
+    background:#080808;
+    z-index:9998;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:35px;
+
+    transition:.4s;
+}
+
+.mobile-nav.active{
+    right:0;
+}
+
+.mobile-nav a{
+    color:white;
+    text-decoration:none;
+    font-size:22px;
+    letter-spacing:2px;
+}
+
+.mobile-nav a:hover{
+    color:#ff7100;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <nav class="nav-left">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#projects">PROJECTS</a>
+    </nav>
+
+
+    <!-- FIXED CENTER LOGO -->
+
+    <a href="#home" class="logo-center" aria-label="SID BUILD Home">
+        <img src="logo.png" alt="SID BUILD Logo">
+    </a>
+
+
+    <nav class="nav-right">
+        <a href="#projects">GALLERY</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#contact" class="quote-btn">GET A QUOTE</a>
+    </nav>
+
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+
+
+
+<!-- MOBILE NAV -->
+
+<div class="mobile-nav" id="mobileNav">
+
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#services">SERVICES</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#contact">CONTACT</a>
+
+</div>
+
+
+
+<!-- ================= HOME ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="site-name">
+            <h1>S<span class="orange-i">I</span>D BUILD</h1>
+        </div>
+
+        <h2>MODERN CLADDING<br>SOLUTIONS</h2>
+
+        <div class="subtitle">
+            PRECISION • QUALITY • STYLE
+        </div>
+
+        <div class="orange-line"></div>
+
+        <div class="services-line">
+            Design
+            <span>/</span>
+            Fabrication
+            <span>/</span>
+            Installation
+        </div>
+
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn btn-orange">
+                VIEW PROJECTS →
+            </a>
+
+            <a href="#services" class="btn btn-dark">
+                OUR SERVICES
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature">
+        <div class="feature-icon">◇</div>
+        <h3>ACM PANELS</h3>
+        <p>
+            Modern, durable and stylish
+            facade solutions.
+        </p>
+    </div>
+
+
+    <div class="feature">
+        <div class="feature-icon">⌁</div>
+        <h3>CNC FABRICATION</h3>
+        <p>
+            Precision cutting for perfect
+            fit and finish.
+        </p>
+    </div>
+
+
+    <div class="feature">
+        <div class="feature-icon">▥</div>
+        <h3>EXTERIOR CLADDING</h3>
+        <p>
+            Professional installation
+            and detailing.
+        </p>
+    </div>
+
+
+    <div class="feature">
+        <div class="feature-icon">✓</div>
+        <h3>QUALITY FIRST</h3>
+        <p>
+            Attention to detail
+            in every project.
+        </p>
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section section-dark" id="about">
+
+    <div class="about">
+
+        <div>
+
+            <h2 class="section-title">
+                ABOUT <span>SID BUILD</span>
+            </h2>
+
+            <p class="section-desc">
+                SID BUILD provides modern exterior cladding solutions
+                with a focus on precision, quality workmanship and
+                contemporary architectural finishes.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <h3>Built With Precision</h3>
+
+            <p>
+                From fabrication to installation, every detail matters.
+                Our goal is to create clean, durable and modern exterior
+                finishes for commercial and residential projects.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section" id="services">
+
+    <h2 class="section-title">
+        OUR <span>SERVICES</span>
+    </h2>
+
+    <p class="section-desc">
+        Complete exterior cladding services from fabrication
+        to final installation.
+    </p>
+
+
+    <div class="services-grid">
+
+        <div class="service-card">
+
+            <h3>ACM Panels</h3>
+
+            <p>
+                Modern aluminum composite panel systems
+                for commercial and residential buildings.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>CNC Fabrication</h3>
+
+            <p>
+                Accurate CNC cutting, routing and fabrication
+                for clean professional panel finishes.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>Exterior Cladding</h3>
+
+            <p>
+                Professional exterior installation with
+                attention to alignment, reveals and detailing.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="section section-dark" id="projects">
+
+    <h2 class="section-title">
+        RECENT <span>PROJECTS</span>
+    </h2>
+
+    <p class="section-desc">
+        Quality work speaks for itself.
+    </p>
+
+
+    <div class="projects-grid">
+
+
+        <div class="project-card">
+
+            <img src="project1.jpg" alt="SID BUILD ACM Project">
+
+            <div class="project-overlay">
+
+                <h3>Modern ACM Exterior</h3>
+
+                <p>ACM CLADDING</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="project-card">
+
+            <img src="project2.jpg" alt="SID BUILD Exterior Project">
+
+            <div class="project-overlay">
+
+                <h3>Commercial Facade</h3>
+
+                <p>EXTERIOR CLADDING</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="project-card">
+
+            <img src="project3.jpg" alt="SID BUILD Cladding Project">
+
+            <div class="project-overlay">
+
+                <h3>Architectural Panels</h3>
+
+                <p>DESIGN & INSTALLATION</p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section contact" id="contact">
+
+    <h2>
+        LET'S BUILD <span>BETTER.</span>
+    </h2>
+
+    <p>
+        Contact SID BUILD for your next exterior cladding project.
+    </p>
+
+    <a href="mailto:info@sidbuild.ca"
+       class="btn btn-orange">
+
+        GET A QUOTE
+
+    </a>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 <strong>SID BUILD</strong>.
+    All Rights Reserved.
+
+</footer>
+
+
+
+<script>
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileNav = document.getElementById("mobileNav");
+
+menuBtn.addEventListener("click", function(){
+
+    mobileNav.classList.toggle("active");
+
+});
+
+
+document.querySelectorAll(".mobile-nav a")
+.forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        mobileNav.classList.remove("active");
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>
